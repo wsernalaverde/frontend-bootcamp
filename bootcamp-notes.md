@@ -1,6 +1,6 @@
 # Historial bootcamp frontend día a día
 ---
-## Día 1
+## Día uno
 
 bitbucket = github. Bitbucket nos da la posibilidad de crear repositorios privados y públicos gratis y github solo los publicos son gratis ya los privados son de costo.
 
@@ -27,7 +27,7 @@ Lanzar mini app en webtask
 > Herramienta ["Typeform"](http://typeform.io/) para hacer formularios súper amigables
 
 
-## Día segundo
+## Día dos
 
 **Markdown:** sintaxis básica de formato, para dar formato a texto. Plataformas como github, slack, whatsapp lo soportan.
 
@@ -123,3 +123,13 @@ Saber estado de [git](https://marklodato.github.io/visual-git-guide/index-en.htm
 1. para agregar a staying todos los archivos lo hacemos con git add . y si algún momento borro un archivo para que coja el cambio lo hago con git add -u .
 
 
+## Día tres
+
+Hoy vamos hacer push en github de la carpeta de control de versiones que tenemos en el pc.
+
+1. primero creamos el repositorio en github, sin la opción de inicializar con readme automaticamente
+1. luego conectamos la carpeta donde tenemos los archivos con el repositorio con >git remote add origin2 https://github.com/wsernalaverde/frontend-bootcamp.git. Esta url final es la url que nos da git del repositorio.
+1. debemos hacer git add de todos los archivos con >git add .
+1. luego hacemos el commit con >git commit -m "comentarios de los cambios"
+1. ahora solo no queda hacer push a github con >git push -u orgin master
+_Nota:_ si le damos origin solo se conectará a través del protocolo ssh pero si tenemos problemas podemos usar origin2 que usará el protocolo https, lo usamos así >git push -u origin2 master
