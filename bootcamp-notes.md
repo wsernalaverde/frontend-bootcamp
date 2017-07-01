@@ -67,6 +67,7 @@ Mi nombre es **William Serna** soy de Belllo, Antioquia.
 1. Fútbol
 
 Esta es mi foto: 
+
 ![Foto William Serna](https://avatars0.githubusercontent.com/u/11982017?v=3&s=460)
 
 Este es mi [Github](https://github.com/wsernalaverde)
@@ -131,5 +132,99 @@ Hoy vamos hacer push en github de la carpeta de control de versiones que tenemos
 1. luego conectamos la carpeta donde tenemos los archivos con el repositorio con >git remote add origin2 https://github.com/wsernalaverde/frontend-bootcamp.git. Esta url final es la url que nos da git del repositorio.
 1. debemos hacer git add de todos los archivos con >git add .
 1. luego hacemos el commit con >git commit -m "comentarios de los cambios"
-1. ahora solo no queda hacer push a github con >git push -u orgin master
-_Nota:_ si le damos origin solo se conectará a través del protocolo ssh pero si tenemos problemas podemos usar origin2 que usará el protocolo https, lo usamos así >git push -u origin2 master
+1. ahora solo no queda hacer push a github con >git push -u origin master
+_Nota:_ si le damos origin solo se conectará a través del protocolo ssh pero si tenemos problemas podemos usar origin2 que usará el protocolo https, lo usamos así >git push -u origin2 master. El paramatro -u nos sirve para guardar lo que hay después de este es decir origin master para que la próxima vez solo tengamos que hacer git push
+
+**Inciar servidor rápido en python**
+Para iniciar un servidor local rapidamente, teniendo instalado Python: `python -m http.server 8000`
+
+Vimos html básico
+
+## Día cuatro
+
+# Html Entities
+
+son los carácteres reservados para la sintaxis de html como <, >, &
+
+Para hacer estos caráctares si lo necesitamos como texto dentro de la página, usamos las QUOTES.
+
+En esta página podemos encontrar una gran cantidad de códigos que para realizar algunos de los carácteres reservados que existen. [aquí](http://ascii.cl/es/codigos-html.htm)
+
+
+# CSS
+
+**Rules**
+- Selector
+- Propiedad
+- Valor
+
+selector {
+	propiedad: valor;
+}
+
+Uno puede poner los estilos de tres formas:
+
+1. Con la etiqueta "style" en el head del html. Ejemplo: 
+<style>
+selector {
+	propiedad: valor;
+}
+</style>
+1. Estilos en línea con el atributo style dentro de la etiqueta que se lo vamos aplicar. Ejemplo: <p style="color:black;">texto</p>
+1. En un archivo .css donde estarán todos los estilos y los podemos linkear en la diferentes páginas de nuestro sitio con la etiquta link. Ejemplo: <link rel="stylesheet" type="text/css" href="ruta de la imagen">
+
+**Unidades de medidas**
+
+Existen diferentes tipos de medidas como px, em, vh, %.
+
+px: unidad de medida
+
+em: un em es el tamaño de la m de la base del texto relativo a su padre. Por ejemplo si tengo un texto de 14px  y a otro texto le pongo 2em entonces un 1em serían 14px y 2 sería el doble 28px; Si el padre no tiene una medida definida coge la medida por default del navegador.
+
+%: tomará el tamaño del procentaje asignado relativo a su contenedor padre
+
+**Elementos bloques y en línea**
+
+Los elementos en bloque ocupan todo el width de su contenedor padre. Entre dos elementos bloques no se va sumar el margin que tenga cada elemento si no que solo va prevalecer el mayor margen de os dos elementos.
+Los elementos en línea ocupan el width de lo que mida su contenido, a estos no se les puede definir un width con esta propiedad, nunca lo va reocnocer. Los margenes solo lo afectan a los lados, no arriba ni abajo.
+
+**Modelo de caja**
+
+En html siempre vamos a diagramar como si tuevieramos un conjunto de cajas, donde cada caja siempre va a tener un contenido, un padding, un border y un margin por todos los costados de la caja.
+
+>[Imágenes creadas a base de un solo div](http://a.singlediv.com/)
+
+**Resetear estilos**
+
+para resetear los estilos que por defecto trae el navegador podemos ponerle el estilo que queramos con el selector *. 
+Ejemplo: *{
+	margin:0;
+	padding:0;
+}
+o podemos usar librerías para esto como [Normalize.css](https://necolas.github.io/normalize.css/)
+
+Por defecto los elementos están con una propiedad llamada content-box que lo que hace es que va a sumar el tamaño del contenido con los padding y los borders entonces el elemento tendría una tamaño total de la sma de estos. si queremos quitar estos podemos usar la propiedad box-sizing que le dice que no los sume entonces va coger el tamaño que le definamos en el width.
+
+**Selectores**
+
+Los selectores más usados en css son de etiqueta, por clase y por id.
+
+- etiqueta: se llaman por el nombre de la etiqueta html ejm: p{
+	propiedad: valor;
+}
+- clases: se llaman en el archivo css con . más el nombre de la clase y en html se le asigna la clase a la etiqueta html que queramos con el atributo class. ejm:
+en el css
+ .nombreclase{
+	propiedad: valor;
+}
+
+en el html
+  _<p class="nombreclase">texto</p>_
+- id: se llaman en el archivo css con # más el nombre del id y en html se le asigna el id a la etiqueta html que queramos con el atributo id. ejm
+en el css
+ #nombreid{
+   propiedad: valor;
+ }
+ _<p id="nombreclase">texto</p>_
+
+ >calcular tamaño de un elemento en css lo hago con width:calc(100%-100px)
