@@ -244,3 +244,30 @@ en el css
 Esto es como la importancia de las reglas declaradas en el css
 
 specifity calculator es una herramienta que nos sirve para calcular la importancia de la reglas css
+
+## Día cinco
+
+>Los elemento tipo bloque no tienen en cuenta los espacios que hay entre etiquetas en el código, mientras que los elementos tipo inline o inline-block si lo tiene en cuenta, estos espacios que hayan entre etiquetas en el navegador se van a renderizar y serán visibles en el navegador.
+
+>Si tengo un a dentro de un li para que este a se rellene dentro de todo el espacio del li le puedo dar al a la propiedad y valor de display:block.
+
+>Propiedad nueva columna que nos permite tener un texto en múltiples columnas, se usa así
+.texto{
+ -moz-column-count: 3;
+ -moz-column-gap: 1em;
+ -webkit-column-count: 3;
+ -webkit-column-gap: 1em;
+ column-count:3;
+ column-gap:1em
+}
+en column-count le decimos el número de columnas que deseamos tener en el texto, en column gap le damos el espacio que vamos a tener entre las columnas. Como esta propiedad es muy nueva debemos utilizar los prefijos para que la reconoscan distintos navegadores. -moz y -webkit. En los navegadores IE9 y Opera Mini no funciona.
+
+```html
+<html>
+<head>
+	
+</head>
+<body></body>
+</html>
+
+```
