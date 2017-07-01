@@ -142,7 +142,7 @@ Vimos html básico
 
 ## Día cuatro
 
-# Html Entities
+**Html Entities**
 
 son los carácteres reservados para la sintaxis de html como <, >, &
 
@@ -151,7 +151,7 @@ Para hacer estos caráctares si lo necesitamos como texto dentro de la página, 
 En esta página podemos encontrar una gran cantidad de códigos que para realizar algunos de los carácteres reservados que existen. [aquí](http://ascii.cl/es/codigos-html.htm)
 
 
-# CSS
+**CSS**
 
 **Rules**
 - Selector
@@ -219,12 +219,28 @@ en el css
 }
 
 en el html
-  _<p class="nombreclase">texto</p>_
+  `<p class="nombreclase">texto</p>`
 - id: se llaman en el archivo css con # más el nombre del id y en html se le asigna el id a la etiqueta html que queramos con el atributo id. ejm
 en el css
  #nombreid{
    propiedad: valor;
  }
- _<p id="nombreclase">texto</p>_
+ `<p id="nombreclase">texto</p>`
 
  >calcular tamaño de un elemento en css lo hago con width:calc(100%-100px)
+
+ **Pseudo-clases**
+
+ :link = un link que nunca ha sido visitado
+
+ :visited = el estado cuando el link ya ha sido visitado
+
+ :hover = el estado cuando el puntero del mouse está sobre el link
+
+ :active = el estado cuando el link está siendo presionado
+
+ **Especifidad**
+
+Esto es como la importancia de las reglas declaradas en el css
+
+specifity calculator es una herramienta que nos sirve para calcular la importancia de la reglas css
