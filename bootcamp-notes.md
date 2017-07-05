@@ -271,3 +271,18 @@ en column-count le decimos el número de columnas que deseamos tener en el texto
 </html>
 
 ```
+
+## Día seis
+
+**CSS Floats**
+
+
+propiedad float. Un elemento puede flotar a la izquerda o a la derecha.
+
+Full-bleed: es cuando el elemento maquetado va ocupar el 100% de la pantalla
+
+los contenedores flotantes no generan un height, para solucionar esto podemos darle la propiedad overflow:hidden al contenedor donde se encuentran los flotantes.
+
+> unsplash.it : en esta página podemos sacar img hd free
+
+En los media object para cuando tenemos la imagen flotando a la izquierda y el texto a la derecha y queremos que el texto no no se pase abajo de la imagen le damos al texto la propiedad overflow:hidden.
