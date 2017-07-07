@@ -286,3 +286,112 @@ los contenedores flotantes no generan un height, para solucionar esto podemos da
 > unsplash.it : en esta página podemos sacar img hd free
 
 En los media object para cuando tenemos la imagen flotando a la izquierda y el texto a la derecha y queremos que el texto no no se pase abajo de la imagen le damos al texto la propiedad overflow:hidden.
+
+##Día siete
+
+JavaScript (pasar notas de las hojas al este archivo)**Pendiente**
+
+## Día ocho
+
+**Closure**
+
+Con esto podemos crear funciones dinámicas con la capacidad de recordar parámetros. Creamos una función que no retorna otra función que guarda el parametro pasado a la primera función.
+
+Ejm: 
+
+´´´
+function sumar(x){
+	return function (y){ return x + y }
+}
+
+var a = sumar(1);
+
+a /*queda valiendo una función*/ function (y){ return 1 + y } //que le va sumar uno a cualquier número que le pasemos
+
+a(10);
+
+//me va imprimir 11
+
+´´´
+
+>También la puedo ejecutar inmediatamente si necesidad de almacenarla en una variable así
+
+´´´´javascript
+
+function makeAdder(x, y){
+ return function(n, m){
+    return x+y+n+m;
+ }
+}
+
+makeAdder(1,1)(2,2) /* con los primeros le pasamos los parámetros a la primera función y con los segundo parentesis ejecutamos la segunda función que nos retorna y le pasamos los parámetros que esta necesita*/
+
+// me imprime 6
+
+
+´´´
+
+**setTimeout()**
+
+Esta función nos sirve para ejecutar algo después de cierto tiempo que le definamos. Primero le debemos declarar la función a ejecutar y separado por una coma le pasamos el tiempo en milisegundos que queremos que tarde en ejecutarse este.
+
+Ejm: 
+
+´´´
+setTimeout(function(){
+	console.log('imprimir cada 5 segundos')
+}, 5000)
+
+´´´
+
+Ejemplo de setTimeout con un for, si tenemos unsetTimeout dentro de un for. El for se ejecuta más rápido que el setTimeout entonces este solo alcanzaría a ejecutarse una sola vez.
+
+´´´
+for(var i=0; i<10; i++){
+	setTimeout(function(){
+		console.log(i);
+	}, 5000)
+}
+
+´´´
+>  Esto me va imprimir el valor de i cada cinco segundos pero como el for termina más rápido que el setTimeout solo me va imprimir i una vez y con el último valor en el que quedó i, para lograr que se ejecute las n veces y concerve cada valor de i debemos hacer un closure
+
+´´´
+for(var i=0; i<10; i++){
+	setTimeout((function(i){
+		return function(){ console.log(i); };
+	}(i)), 1000)
+}
+
+for(var i=0; i<10; i++){
+	(function(x){
+	 return function(){ setTimeout(function(){
+		console.log(i);
+	}, 5000)}
+	})(i)}
+
+´´´
+
+**IIFE**
+
+Immediately Invoked Function Expression, quiere decir que podemos ejecutar una función inmediatamente la declaramos. Para esto debemos declarar la función y ponerle dos parentesis al final y todo esto completo meterlo dentro de parentesis. [referencia]
+
+Ejm:
+
+´´´
+(function miFuncion(nombre){
+	console.log('Este es mi nombre ' + nombre);
+}('William'));
+
+´´´
+
+[referencia]:http://benalman.com/news/2010/11/immediately-invoked-function-expression/
+
+**This**
+
+Palabra reservada de js, que nos permite cambiar el contexto de una función.
+
+Ejm:
+
+
+>el contexto global en los navegadores es el objeto window, por ejemplo todas la variables o funciones que creamos en la consola de del navegador quedan guardadas en este objeto.
