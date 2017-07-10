@@ -394,4 +394,50 @@ Palabra reservada de js, que nos permite cambiar el contexto de una función.
 Ejm:
 
 
->el contexto global en los navegadores es el objeto window, por ejemplo todas la variables o funciones que creamos en la consola de del navegador quedan guardadas en este objeto.
+>el contexto global en los navegadores es el objeto window, por ejemplo todas la variables o funciones que creamos en la consola de del navegador quedan guardadas en este objeto. Y en node es el objeto global
+
+## Día nueve
+
+> this = contexto en javaScript
+
+**HTML Semantico**
+
+outliner html es una herramienta que nos ayuda a revisar si la estrcutura semántica de nuestro html se encuentra correctamente definida.
+
+## Día diez
+
+**Formularios**
+
+La etiqueta para crear formularios ser llama form:
+
+´´´´html
+<form>
+	<!--Aquí van todos los inputs del formulario-->
+</form>
+
+´´´
+
+Existen una variada cantidad de inputs de entrada en los formularios.
+
+- <input type="text"> //este es para agregar una caja de texto.
+- <input type="email"> //este un campo de texto especial para que ingresen un email
+
+>Rejects 
+
+>Bootstrap validator
+
+>mailgun servicio para envío de correos sin necesidad de un servidor. es gratis
+
+
+**Media queries**
+
+con está declaración le decimos al navegador que aplique los estilos dependiendo de su condición de medida.
+
+>codrops
+
+>browser diet
+
+>A/B Testing: comparar dos diseños de una web para saber cual es más usable.
+
+## Día once
+
