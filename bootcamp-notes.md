@@ -441,4 +441,189 @@ con está declaración le decimos al navegador que aplique los estilos dependien
 
 ## Día once
 
+**Solucionar conflictos en git**
+
+Sí hacemos un cambio en el repositorio o desde otra maquina que se conecta remoto a ese repositorio
 kdiff3
+
+git clone
+
+**JSON**
+
+Un JSON es igual a un objeto en javaScript pero la única diferencia es que las propiedades van entre comillas. Primera regla de un JSON deve estar dentro de {}
+
+JavaScript tiene dos metodos que podemos usar para tratar JSON.
+
+JSON.parse(); Este nos sirve para convertir un JSON a un objeto de javaScript.
+
+JSON.stringify(); Este nos sirve para convertir un objeto de javaScript a un JSON.
+
+**DOM**
+
+array-like
+
+>objeto que tienen una propiedad función se les denominan métodos.
+
+*Selectores de elemento*
+
+- document.getElementById()= nos sirve para seleccionar los elementos del DOM por id
+
+- document.querySelector()= nos sirve para seleccionar elementos del DOM utilizando selectores de css como clases, ids, etc. Pero este solo nos cogerá el primero que cumpla con la regla
+
+-document.querySelectorAll()= nos sirve para seleccionar elementos del DOM utilizando selectores de css como clases, ids, etc. Pero este solo nos cogerá todos los que cumplan con la regla
+
+> Cuando ponemos un addEventListener a un elemento, en el callback que le pasamos para ejecutar cuando sucede el evento, el this dentro de este callback será el elemento.
+Ejemplo:
+si ponemos escuchar un botón el this dentro de su callback sería el botón
+
+> Quitar evento por defecto con javaScript lo hacemos con event.preventDefault(); Ejm: form.addEventListener('submit', function(event){
+	event.preventDefault();
+
+});
+
+## Día Doce
+
+
+**CDN**
+
+Un cdn sirve para subir archivos estáticos como js o css y poderlos llamar en mi sitio. La ventaja de este es que la subirlo el los reparte en varios servidores del mundo, entonces la gente cuando carga la página el cdn le va cargar desde el servidor más cercano.
+
+**joinn()**
+
+Convertir un array en strign concatenandole lo que queramos.
+ejm:
+var v = [2, 3, 4 ]
+
+
+## Día Trece
+
+**Flexbox**
+
+- flex-flow: combina las dos propiedades de flex-direction y flex-wrap. Primero se le pasa el valor flex-direction y luego el de flex-wrap.
+ejm:
+´´´
+flex-flow:column wrap;
+´´´
+
+## Día Trece
+
+> Un elemento tipo inline no se les puede asignar un width, ni tampoco un margin-top, ni margin-bottom. Estas propiedades la ignora por completo. En cambio a los elementos inline-block sí se puede. En elementos inline-block podemos usar vertical-align para alinear lo elementos verticalmente, este no se le aplica al padre si no a acada elemento.
+
+> Para centrar elementos inline el padre debe tener la propiedad text-align:center; y debe ser tipo bloque.
+
+> Página para selección de colores [flatuicolors](https://flatuicolors.com/)
+
+> Los elementos inline tienen un espacio de reserva arriba y abajo para el baseline de la letras, lo podemos corregir con display:block;. [Referencia](https://mor10.com/removing-white-space-image-elements-inline-elements-descenders/)
+
+> El atributo aria-hidden=true le dice a los lectores semánticos en el navegador que este elemento no existe.
+
+> main axis (horizontal) y cross axis (vertical). Esto es en Flexbox.
+
+> user-select:none; esta propiedad nos sirve para que un elemento no se pueda seleccionar
+
+> pointer-events:none; sirve para que no se puede hacer clic en los elementos, el clic sería por detrás del elemento como si traspasara
+
+## Día Catorce
+
+**Elemntos posicionados**
+
+- static (default) not positioned
+- relative: este posiciona el elemento de acuerdo a su posición inicial
+- absolute: este posiciona el elemento de acuerdo a el primer padre que esté posicionado (que tenga cualquier posición)
+- fixed: este posiciona el elemento fijo en toda la página.
+
+**child selectors**
+
+con este selector vamos a seleccionar los hijos directos de una elemento. Ejm:
+
+´´´´css
+
+div > span{
+	background: white;
+}
+
+/*En este ejemplo aplicará el estilo a los span directos que estén dentro del div*/
+
+´´´
+
+**setInterval**
+
+Está función de js funciona parecido al setTimeout, pero este lo que hace es que me va ejecutar una función infinitamente cada cierto tiempo que le pase, por ejemplo cada 5 seg y no va parar de ejecutarse hasta que yo lo pare.
+
+**last-of-type**
+
+selecciona el ultimo elemento del mismo tipo. Ejem:
+
+´´´css
+
+.menu li:last-of-type{
+	
+} /*Este me va seleccionar el ultimo elemento pero que sea tipo*/
+
+´´´
+
+> [greensock](https://greensock.com/) librería para hacer animaciones con js.
+
+> [animate.css](https://daneden.github.io/animate.css/) librería para hacer animacuones con css.
+
+> [mojs.io](http://mojs.io/) librería para hacer animaciones js demos en el repositorio.
+
+> Velocityjs.org sirve para medir testear velocidad de animaciones.
+
+**Media queries**
+
+**Responsive Images**
+
+cada pixel en una pantalla retina son 4 pixels
+
+> git fetch sirve para revisar que cambios existieron en el remoto pero no los sincorniza solo es para preguntar
+
+> git checkout exercises-solved : git checkout es para sicronizar los cambios.
+
+## Día Quince
+
+> .trim(), este método de javascript nos sivre para quitar los espacios vacíos en una cadena de texto al inicio y al final.
+
+**MVC**
+
+Modelo vista controlador: 
+
+Contolador : se encatga de recopilar los datos que va necesita la vista.
+
+
+**CRUD**
+
+todo el proceso de la base de datos: create, read, update, delete
+
+**Gestor de tares**
+
+Existen varios, los más usados son gulp y grunt, con esto podemos realziar tareas como compilar os archivos js, mificar los css, etc
+
+**Yeoman**
+
+[Yeoman](http://yeoman.io/)
+
+
+- primero instalamos Yeoman npm 
+´´´
+npm i -g yo
+
+´´´
+
+- luego instalamos una plantilla para crear un web app.
+
+´´´
+npm i -g generator-webapp
+
+´´´
+
+- Lugo generamos la plantila con yo webapp (con el comando yo y el nombre de la plantilla que instalamos)
+Aquí seleccionamos los paquetes que deseamos instalar (boostrap, modernizer, sass)
+
+- con gulp serve, nos va correr la aplicación en el navegador y va quedar escuchcando cambios.
+
+**Boostrap**
+
+existe container y container-fluid. El container tiene un width fijo y fluid no.
+
+> vh : viewport height, con 100vh el contenedor me va coger el 100% de alto de la pantalla de mi dispositivo.
