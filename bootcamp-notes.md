@@ -627,3 +627,55 @@ Aquí seleccionamos los paquetes que deseamos instalar (boostrap, modernizer, sa
 existe container y container-fluid. El container tiene un width fijo y fluid no.
 
 > vh : viewport height, con 100vh el contenedor me va coger el 100% de alto de la pantalla de mi dispositivo.
+
+## Día 16
+
+> para centrar un elemento con posición absoluta le podemos dar top, bottom, left, right igual a cero. Esto nos sirve también para decirle que tenag el mismo tamaño de su padre.
+
+> No todos los elementos soportan seudo-elementos como los inputs. Todos los seudo-elementos deben de tener un content así sea vacío.
+
+> seudo-clase :visible, esto me hace que solo a los elementos que estén visibles les aplique los estilos. ejm: .carousel .carousel-item:visible { estilos }
+
+> las propiedades en css se les puede asignar los siguientes valores: inherit hereda el de papa, initial el inicial del navegador, unset que no tenga nada.
+
+> calc(50% - 10px) calcula la mitad de un width de un elemento de width de 20px. 
+
+## Día 17
+
+> Foundation for emails: herramienta para crear emails en html.
+
+> iconmosters : librería de iconos.
+
+> polyfill : sirve como pacth temporal para que tu código muy moderno se pueda ejecutar en navegadores viejos.
+
+> jquery input mask: poner mascaras a los inputs (robert)
+
+> deeepin
+
+**jQuery**
+
+Librería de manejo del DOM. Es una librería que funciona con javaScript
+
+__Propiedades__
+
+[Documentación](https://api.jquery.com/category/traversing) para navegar entre los elementos del DOM
+
+## Día 18
+
+**SASS**
+
+Para hacer variables en sass lo podemos hacer con el signo $. ejm:
+
+´´´´SASS
+$color-red: #32423s;
+
+p{
+	color: $color-red;
+}
+´´´
+
+Con node-sass me sivre para compilar el archivo scss a css de la siguiente forma, le decimos node-sass el nombre del archivo sass y seguido el nombre como queremos que quede nuestro archivo css.  ejm:
+
+´´´
+node-sass main.scss main.css
+´´´
