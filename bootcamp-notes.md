@@ -165,13 +165,23 @@ selector {
 Uno puede poner los estilos de tres formas:
 
 1. Con la etiqueta "style" en el head del html. Ejemplo: 
+
+```html
 <style>
 selector {
 	propiedad: valor;
 }
 </style>
-1. Estilos en línea con el atributo style dentro de la etiqueta que se lo vamos aplicar. Ejemplo: <p style="color:black;">texto</p>
-1. En un archivo .css donde estarán todos los estilos y los podemos linkear en la diferentes páginas de nuestro sitio con la etiquta link. Ejemplo: <link rel="stylesheet" type="text/css" href="ruta de la imagen">
+```
+1. Estilos en línea con el atributo style dentro de la etiqueta que se lo vamos aplicar. Ejemplo: 
+
+```html
+<p style="color:black;">texto</p>
+```
+1. En un archivo .css donde estarán todos los estilos y los podemos linkear en la diferentes páginas de nuestro sitio con la etiquta link. Ejemplo: 
+```html
+<link rel="stylesheet" type="text/css" href="ruta de la imagen">
+```
 
 **Unidades de medidas**
 
@@ -197,10 +207,15 @@ En html siempre vamos a diagramar como si tuevieramos un conjunto de cajas, dond
 **Resetear estilos**
 
 para resetear los estilos que por defecto trae el navegador podemos ponerle el estilo que queramos con el selector *. 
-Ejemplo: *{
+Ejemplo:
+
+```css
+ *{
 	margin:0;
 	padding:0;
 }
+```
+
 o podemos usar librerías para esto como [Normalize.css](https://necolas.github.io/normalize.css/)
 
 Por defecto los elementos están con una propiedad llamada content-box que lo que hace es que va a sumar el tamaño del contenido con los padding y los borders entonces el elemento tendría una tamaño total de la sma de estos. si queremos quitar estos podemos usar la propiedad box-sizing que le dice que no los sume entonces va coger el tamaño que le definamos en el width.
@@ -227,7 +242,7 @@ en el css
  }
  `<p id="nombreclase">texto</p>`
 
- >calcular tamaño de un elemento en css lo hago con width:calc(100%-100px)
+ > calcular tamaño de un elemento en css lo hago con width:calc(100%-100px)
 
  **Pseudo-clases**
 
@@ -247,11 +262,13 @@ specifity calculator es una herramienta que nos sirve para calcular la importanc
 
 ## Día cinco
 
->Los elemento tipo bloque no tienen en cuenta los espacios que hay entre etiquetas en el código, mientras que los elementos tipo inline o inline-block si lo tiene en cuenta, estos espacios que hayan entre etiquetas en el navegador se van a renderizar y serán visibles en el navegador.
+- Los elemento tipo bloque no tienen en cuenta los espacios que hay entre etiquetas en el código, mientras que los elementos tipo inline o inline-block si lo tiene en cuenta, estos espacios que hayan entre etiquetas en el navegador se van a renderizar y serán visibles en el navegador.
 
->Si tengo un a dentro de un li para que este a se rellene dentro de todo el espacio del li le puedo dar al a la propiedad y valor de display:block.
+- Si tengo un a dentro de un li para que este a se rellene dentro de todo el espacio del li le puedo dar al a la propiedad y valor de display:block.
 
->Propiedad nueva columna que nos permite tener un texto en múltiples columnas, se usa así
+ - Propiedad nueva columna que nos permite tener un texto en múltiples columnas, se usa así
+
+```css
 .texto{
  -moz-column-count: 3;
  -moz-column-gap: 1em;
@@ -260,6 +277,7 @@ specifity calculator es una herramienta que nos sirve para calcular la importanc
  column-count:3;
  column-gap:1em
 }
+```
 en column-count le decimos el número de columnas que deseamos tener en el texto, en column gap le damos el espacio que vamos a tener entre las columnas. Como esta propiedad es muy nueva debemos utilizar los prefijos para que la reconoscan distintos navegadores. -moz y -webkit. En los navegadores IE9 y Opera Mini no funciona.
 
 ```html
@@ -299,7 +317,8 @@ Con esto podemos crear funciones dinámicas con la capacidad de recordar paráme
 
 Ejm: 
 
-´´´
+
+```javascript
 function sumar(x){
 	return function (y){ return x + y }
 }
@@ -312,11 +331,12 @@ a(10);
 
 //me va imprimir 11
 
-´´´
+```
 
 >También la puedo ejecutar inmediatamente si necesidad de almacenarla en una variable así
 
-´´´´javascript
+
+```javascript
 
 function makeAdder(x, y){
  return function(n, m){
@@ -327,9 +347,7 @@ function makeAdder(x, y){
 makeAdder(1,1)(2,2) /* con los primeros le pasamos los parámetros a la primera función y con los segundo parentesis ejecutamos la segunda función que nos retorna y le pasamos los parámetros que esta necesita*/
 
 // me imprime 6
-
-
-´´´
+```
 
 **setTimeout()**
 
@@ -337,26 +355,29 @@ Esta función nos sirve para ejecutar algo después de cierto tiempo que le defi
 
 Ejm: 
 
-´´´
+```javascript
 setTimeout(function(){
 	console.log('imprimir cada 5 segundos')
 }, 5000)
 
-´´´
+```
 
 Ejemplo de setTimeout con un for, si tenemos unsetTimeout dentro de un for. El for se ejecuta más rápido que el setTimeout entonces este solo alcanzaría a ejecutarse una sola vez.
 
-´´´
+
+```javascript
 for(var i=0; i<10; i++){
 	setTimeout(function(){
 		console.log(i);
 	}, 5000)
 }
 
-´´´
+```
+
 >  Esto me va imprimir el valor de i cada cinco segundos pero como el for termina más rápido que el setTimeout solo me va imprimir i una vez y con el último valor en el que quedó i, para lograr que se ejecute las n veces y concerve cada valor de i debemos hacer un closure
 
-´´´
+
+```javascript
 for(var i=0; i<10; i++){
 	setTimeout((function(i){
 		return function(){ console.log(i); };
@@ -370,7 +391,7 @@ for(var i=0; i<10; i++){
 	}, 5000)}
 	})(i)}
 
-´´´
+```
 
 **IIFE**
 
@@ -378,12 +399,13 @@ Immediately Invoked Function Expression, quiere decir que podemos ejecutar una f
 
 Ejm:
 
-´´´
+
+```javascript
 (function miFuncion(nombre){
 	console.log('Este es mi nombre ' + nombre);
 }('William'));
 
-´´´
+```
 
 [referencia]:http://benalman.com/news/2010/11/immediately-invoked-function-expression/
 
@@ -394,7 +416,7 @@ Palabra reservada de js, que nos permite cambiar el contexto de una función.
 Ejm:
 
 
->el contexto global en los navegadores es el objeto window, por ejemplo todas la variables o funciones que creamos en la consola de del navegador quedan guardadas en este objeto. Y en node es el objeto global
+> el contexto global en los navegadores es el objeto window, por ejemplo todas la variables o funciones que creamos en la consola de del navegador quedan guardadas en este objeto. Y en node es el objeto global
 
 ## Día nueve
 
@@ -410,12 +432,12 @@ outliner html es una herramienta que nos ayuda a revisar si la estrcutura semán
 
 La etiqueta para crear formularios ser llama form:
 
-´´´´html
+```html
 <form>
 	<!--Aquí van todos los inputs del formulario-->
 </form>
 
-´´´
+```
 
 Existen una variada cantidad de inputs de entrada en los formularios.
 
@@ -470,7 +492,7 @@ array-like
 
 - document.querySelector()= nos sirve para seleccionar elementos del DOM utilizando selectores de css como clases, ids, etc. Pero este solo nos cogerá el primero que cumpla con la regla
 
--document.querySelectorAll()= nos sirve para seleccionar elementos del DOM utilizando selectores de css como clases, ids, etc. Pero este solo nos cogerá todos los que cumplan con la regla
+- document.querySelectorAll()= nos sirve para seleccionar elementos del DOM utilizando selectores de css como clases, ids, etc. Pero este solo nos cogerá todos los que cumplan con la regla
 
 > Cuando ponemos un addEventListener a un elemento, en el callback que le pasamos para ejecutar cuando sucede el evento, el this dentro de este callback será el elemento.
 Ejemplo:
@@ -501,9 +523,10 @@ var v = [2, 3, 4 ]
 
 - flex-flow: combina las dos propiedades de flex-direction y flex-wrap. Primero se le pasa el valor flex-direction y luego el de flex-wrap.
 ejm:
-´´´
+
+```css
 flex-flow:column wrap;
-´´´
+```
 
 ## Día Trece
 
@@ -536,15 +559,14 @@ flex-flow:column wrap;
 
 con este selector vamos a seleccionar los hijos directos de una elemento. Ejm:
 
-´´´´css
+```css
 
 div > span{
 	background: white;
 }
 
 /*En este ejemplo aplicará el estilo a los span directos que estén dentro del div*/
-
-´´´
+```
 
 **setInterval**
 
@@ -554,13 +576,13 @@ Está función de js funciona parecido al setTimeout, pero este lo que hace es q
 
 selecciona el ultimo elemento del mismo tipo. Ejem:
 
-´´´css
+```css
 
 .menu li:last-of-type{
 	
 } /*Este me va seleccionar el ultimo elemento pero que sea tipo*/
 
-´´´
+```
 
 > [greensock](https://greensock.com/) librería para hacer animaciones con js.
 
@@ -605,17 +627,18 @@ Existen varios, los más usados son gulp y grunt, con esto podemos realziar tare
 
 
 - primero instalamos Yeoman npm 
-´´´
-npm i -g yo
 
-´´´
+
+```bash
+npm i -g yo
+```
 
 - luego instalamos una plantilla para crear un web app.
 
-´´´
-npm i -g generator-webapp
 
-´´´
+```bash
+npm i -g generator-webapp
+```
 
 - Lugo generamos la plantila con yo webapp (con el comando yo y el nombre de la plantilla que instalamos)
 Aquí seleccionamos los paquetes que deseamos instalar (boostrap, modernizer, sass)
@@ -664,18 +687,230 @@ __Propiedades__
 
 **SASS**
 
+[Aprendiendo SASS](http://sass-lang.com/guide)
+[Documentación](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
+Este puede usar dos tipos extensiones en sus archivos, estos serían sass y scsss. La diferencia entre estos es su sintaxis.
+
 Para hacer variables en sass lo podemos hacer con el signo $. ejm:
 
-´´´´SASS
+```css
 $color-red: #32423s;
 
 p{
 	color: $color-red;
 }
-´´´
+```
 
 Con node-sass me sivre para compilar el archivo scss a css de la siguiente forma, le decimos node-sass el nombre del archivo sass y seguido el nombre como queremos que quede nuestro archivo css.  ejm:
 
-´´´
+
+```bash
 node-sass main.scss main.css
-´´´
+```
+
+SASS tiene nesti que es que podemos tener estilos anidados dentro de otras estilos, es decir los estilos anidados solo se aplicarán a los selectores que estén dentro del selector padre ejm:
+
+
+```css
+div{
+	background-color:red;
+
+	p{
+		background-color:blue;
+	}
+}
+/* El de arriba me compilaría a css esto*/
+
+div {
+	background-color:red;
+}
+
+div p{
+	backgroun-color:blue;
+}
+
+```
+
+se pueden importar archivos sass dentro de otro archivos sass, con import ejm:
+
+
+```css
+
+/*Acá importamos el archivos mobile.css dentro del archivo main.scss*/
+@import mobile.scsss
+```
+operador &: este nos sivre para referenciar al selectpor padre dentrod e si. Ejem:
+
+
+```css
+button{
+	color:white;
+
+	&:hover{
+
+	}
+
+	&:visited{
+
+	}
+
+	&:focus{
+
+	}
+}
+```
+
+Para juntar varios archivos scss en uno solo los podemos hacer con node-sass src -o dist, entonces todos los archivos que tengan _ delante de su nombre quedaran dentro del que se este importando.
+
+**BEM**
+
+[Documentación](http://sass-lang.com/guide)
+
+Metodología de cómo debemos nombrar las clases de los elementos para hacer nuestro css más escalables.
+
+**SMACSS**
+
+[Documentación](https://smacss.com/book/categorizing)
+
+Metodología para saber como organizar nuestro código.
+
+> [Sassdirector](http://sassdirector.com/), guía de como organiza el código. *The best
+
+## Día 19
+
+**JavaScript funcional**
+
+esto nos sivre para prevenir los efectos secundarios.
+
+- slice() es una función pura, esta me sirve para clonar un array sin modificar el que clonó. Si le paso la posición solo me va cloanr el elemento de esa posición.
+
+- splice() esta función me sirve para sacar lo que quiero de un array dependiendo de la posión que le pasemos, si le pasó uno me cra un nuevo array con los valores del array después de la posición uno del viejo array pero me modifica el viejo array.
+
+- Object.assign (a, b), me sirve para clonar un objeto sin mutarlo. con object.assign cogemos las propiedades del objeto b  se lo asignamos al objeto a. Pero si queremos un objeto nuevo sin que nos mute el a el primer objeto que le pasamos es un objeto vacío.
+
+Ejm:
+
+```javascript
+Object.assign (a, b) // acá clonamos los elementos del objeto b a el objeto a
+
+Object.assign ({}, a, b) // acá clonamos los elementos del objeto b dentro del a pero guardamos los elementos en un objeto nuevo si mutar el a.
+
+```
+
+- Object.freeze(), me sirve para congelar un objeto es decir que ya no se va poder modificar, pero solo va a congelar su primer nivel es decir este objeto tiene otro objeto dentro de este, este objeto si se va poder modificar.
+
+**Map()**
+
+me sirve para interar una función sobre cada elemento de un array. (métodos funcionales) ejm:
+
+```javascript
+[1,2,3,4].map(function(x){
+ return x-2;
+})
+
+// retorna [-1,0,1,2]
+```
+
+**Filter()**
+
+me sivre para filtrar los valores de un array. (métodos funcionales)  Ejm:
+
+```javascript
+[1,2,3,4].filter(function(x){
+	return x===2;
+})
+
+//retorna [2]
+```
+
+**Reduce()**
+
+Me reduce los elementos dentro de un array y lo combina a uno solo. (métodos funcionales) 
+este en su callback recibe un acumulador y el número actual. y la función reduce recibe el callback y como inicializamos el acumulador. ejm:
+
+```javascript
+function concatenar(acc, curr){
+ return `${acc} ${curr}`;
+}// esta función me concatena el acumulador con el valor actual
+
+array.reduce(concatenar, '')//este me recive la función concatenar y inicializamos el acumulador como un string vacío.
+```
+
+##Día 20
+
+**Emma script 2015**
+
+[Documentación](https://css-tricks.com/lets-learn-es2015)
+
+**Let y const**
+
+para declarar variables con un scope de bloque, const no puede cambiar el valor con el que se definió, pero let sí. Si const es declarado como un objeto no se puede cambiar que sea un objeto pero si los valores dentro de este.
+
+**Templates literals**
+
+esto nos sirve para iyectar variables dentro de una cadena, también nos permite agregar salto de líneas solo con enter sin necessidad de "\n" Ejm:
+
+`El ${bootcamp} es ${elmejor}`
+
+**Arrow function**
+
+sintaxis: () => { }, ejm:
+
+
+```javascript
+(x, y, z) => { return x + y + z }
+```
+
+Si le paso un solo parametro no tengo necesidad de escribir los parentesis. Ejm:
+
+```javascript
+//ejm1
+item => { return item * 2}
+
+//ejm2
+[1,2,3].map(item => { return item*2 })
+```
+
+Si la función me retorna algo no hay necesidad de escribir las llaves ni la palabra return. Ejm:
+
+```javascript
+[1,2,3].map(item => item*2)
+```
+
+**Spread Operators**
+
+Coge un elemento iterable y me devuelve un lista de argumentos. 
+Sintaxis ...[]
+
+Ejm:
+
+```javascript
+const numbers = [39, 25, 90, 123];
+const max = Math.max(...numbers);//la función Math.max me retorna el mayor de los parametros que le pasamos, pero como numbers es un array con los tres punto del spread le podemos sacar esos valores del array y pasarlos como una lista de parametros separdos por coma.
+console.log(max)
+```
+
+**Rest parameters**
+
+Es lo que spread pero alrevés, es decir que me coge una lista de argumentos y me lo convierte en un array.
+
+Ejm:
+
+```javascript
+function sum(...argu){
+ return argu.reduce(function(acc, curr){
+	 return acc + curr;
+ }, 0)
+}
+
+/*Refactor
+
+function sum(...argu){
+ return argu.reduce((acc, curr) => acc + curr, 0)
+}*/
+
+sum(1, 2, 4)
+```
+
+**Destructuring**
+
