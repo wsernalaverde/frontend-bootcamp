@@ -1266,7 +1266,7 @@ fruits.join('-') //resultado es "Banana-Orange-Apple-Mango"
 
 **Gráfico ciclo de vida React**
 
-![Ciclo de vida React](./img/react-lifecycle-flow-chart-states-png Eccomerce)
+![Ciclo de vida React](./img/react-lifecycle-flow-chart-states-png)
 
 **Semantic UI**
 
