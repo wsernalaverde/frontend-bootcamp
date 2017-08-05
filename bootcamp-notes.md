@@ -468,7 +468,21 @@ con está declaración le decimos al navegador que aplique los estilos dependien
 Sí hacemos un cambio en el repositorio o desde otra maquina que se conecta remoto a ese repositorio
 kdiff3
 
-git clone
+Se deben solucionar los confilctos manualmente, con la ayuda de editores visuales que muestran los cambios.
+
+- git clone. Este nos sirve para clonar un repositorio existente.
+
+- git pull sirve para preguntar al repositorio remoto si hay cambios y descargalos en nuestro repositorio local.
+
+- git diff nos sirve para ver las diferencias entre nuestro último commit y la versión que descargamos con el pull. ejm: git diff head
+
+- git reset. Nos sirve para sacar un archivo del estado staying
+
+- git branch. Nos sirve para saber el nombre de las ramas existentes y también para crear una nueva, para una nueva lo hacemos con git branch y el nombre de la rama.
+
+- git checkout "nombre-rama" esto nos sirve para navegar entre las ramas.
+
+- git branch -d "nombre-rama" este nos sirve para borrar la rama.
 
 **JSON**
 
@@ -914,3 +928,393 @@ sum(1, 2, 4)
 
 **Destructuring**
 
+Este sirve para descomponer objetos o arrays en JavaScript.
+ejm:
+
+
+```javascript
+
+```
+
+## Día 21
+
+JavaScript es un lenguaje que se ejecuta asyncornamente.
+
+La base de la programación orientada a objetos es que se pueden enviar parámetros entre funciones.
+
+**calbacks**
+
+con esto podemos solucionar el problema del asyncronismo en JavaScript, son funciones que que esperan un resultado para ejecutarse.
+
+**Promesas**
+
+Este salio desde EMS6, se declara con el objeto de de javaScript Promise, este recibe dos parametros resolve y reject. Este es como si fuera un callback pero sin tener que ejecutarles los una functión adentro si no que le declaramos un paso a paso.
+si la promesa se resuelve correctamente ejecutará los pasos que hay en then(). Podemos tener los then que deseamos. Y si la promesa no se resulve se ejecutará lo que haya en el catch.
+
+```javascript
+
+var promise = new Promise(function(resolve, reject){
+
+})
+
+```
+
+**HTTP, HTTPS, HTTP/2**
+
+HTTP (Hipertext transfer type protocol)
+
+Estos funcionan con peticiones como get, post, put y delete. Cada de estas peticiones tienen un status.
+
+Status code:
+
+- 200 ok
+- 404
+- 500
+- 400
+
+**AJAX jQuery**
+
+Me sirve para comunicarme al servidor si necesidad de recargar la página
+
+**Fetch**
+[Ejemplos](https://davidwalsh.name/fetch)
+
+```
+fetch('url')
+
+```
+> [http-server](https://www.npmjs.com/package/http-server): esta librería me sirve para levantar un servior http rápido
+
+## Día 22
+
+**Browser Storage**
+
+**localStorage**
+
+Persists the data until the user explicitly deletes the data.
+Use it when you need to store some data for the long term.
+
+```javascript
+
+const a = 1;
+localStorage.setItem('key', a);
+localStorage.getItem('key'); // 1
+
+// set objects
+
+//bad
+const pets = ["dog", "cat", "hamster"];
+localStorage.setItem('pets', pets);
+localStorage.getItem('pets'); // "dog, cat, hamster" 
+
+// good
+localStorage.setItem('pets', JSON.stringify(pets));
+const s = localStorage.getItem('pets') // "[dog, cat, hamster]"
+JSON.parse(s); // ["dog", "cat", "hamster"]
+
+localStorage.removeItem('pets');
+
+localStorage.clear();
+```
+
+Es como una especie de base de datos en el navegador del lado del cliente, que se va mantener así se cierre el navegador. Se puede almacenar hasta 5mb de info. Esta funciona como un objeto que tiene una clave - valor.
+
+Todo lo que se guarda en el localStorage se guarda como un string.
+
+- localStorage.setItem('key', values). Este nos sirve para guardar datos en el localStorage, le pasamos una llave y un valor.
+- loaalStorage.getItem('key'). Este nos sirve para traer datos del localStorage, le pasamos el key que queremos consultar.
+- localStorage.clear(). Este me sirve para limpiar el localStorage.
+
+- JSON.stringify(). Me convierte cualquier objetode javascript a un string, y conserva todas sus llaves, es decir que quedal tal cual lo escribimos.
+
+Ejem:
+
+```javascript
+let a = [1,2,3]
+
+JSON.stringify(a)
+
+// me queda un string así "["1","2","3"]"
+```
+
+- JSON.parse(). Me convierte un string desde que tenga la sintaxis correcta a un objeto.
+
+Ejem:
+
+```javascript
+let a = "['1','2','3']"
+
+JSON.parse(a)
+
+// me queda como un array [1,2,3]
+
+```
+
+Ejemplo de consumo de la api de películas: en este ejemplo hacemos un condicional donde si no existe el localStorage me trae la data desde el servidor de la api y gurdamos esta data en el localStorage y luego que volvamos a cargar la página ya no va cargar la data desde la api, si no desde el localStorage.
+
+```javascript
+
+
+```
+
+**SessionStorage**
+
+Per­sists a stor­age area for the duration of the page ses­sion.
+Use it when you need to store some data tem­porar­ily. 
+
+Este es similar al localStorage pero a diferencia es que el session solo se guarda en la sección activa, si se cierra la ventana se pierde esta información.
+
+[Ejemplos de uso de sessionStorage](https://css-tricks.com/localstorage-examples/)
+
+**Cookies**
+
+Estas se pasan en las cabeceras de las respuestas. Funciona con clave y valor, se le puede dar una fecha de expiración, tiempo máximo de vida.
+
+```javascript
+<name>=<value>; expires=<date>; max-age=<seconds>; path=<route>; domain=<domain>; secure; httponly;
+
+```
+
+Example responde server:
+
+```
+HTTP/1.0 200 OK
+Content-type: text/html
+Set-Cookie: colorPreference=blue
+Set-Cookie: sessionToken=48745487; Expires=Thu, 01 Jan 2031 19:22:10 GMT
+```
+
+```
+GET /examole.html HTTP/1.1
+Host: www.mysite.com
+Cookie: colorPreference=blue; sessionToken=48745487
+```
+
+Create cookie
+
+```
+document.cookie = "name=value;";
+
+const cookie2 = "name2=value2;";
+document.cookie = document.cookie + " " + cookie2; //"name=value; name2=value2"
+```
+
+[Librería para manejo de cookies](https://www.npmjs.com/package/cookies-js)
+
+**DevTools**
+
+[curso gratis de devtools](https://www.codeschool.com/courses/discover-devtools)
+
+
+**debugger**
+
+propiedad del navegador que va parar la ejecución en ese punto donde lo colocamos y me va mostrar todas las variables de entorno.
+
+## Día 23
+
+**Modular JavaScript**
+
+Un módulo en JavaScript se puede interpretar como un pedazo de código que podemos reutilizar en varias veces en varios lugares de nuestra app.
+EJM:
+```javascript
+function agenda() {
+  const personas = [];
+  function agregar(nombre) {
+    personas.push(nombre);
+  }
+  function imprimir() {
+    console.log(personas)
+  }
+  
+  return {
+    agregar: agregar,
+    imprimir: imprimir
+  }
+}
+
+var Agenda = agenda();
+Agenda.agregar("alvaro");
+Agenda.agregar("luisa");
+Agenda.imprimir()
+
+
+var Agenda2 = agenda();
+
+Agenda2.imprimir();
+
+/*["alvaro", "luisa"]
+[]*/
+```
+
+
+**Common js**
+
+**npm**
+
+Gestor de paquetes de node js. En este podemos encontrar o subir paquetes que nos ayuden al desarrollo.
+
+**Yarn**
+
+Es lo mismo que npm pero su proceso hace que la descarga de los paquetes sea muhco más rápida. Esta igual consulta la librería.
+
+**Versionamiento**
+
+Tipo de documentación según versiones [Semver](http://semver.org/).
+ejm: version: 1.0.0
+
+- el último numero cambia cuando se arregló un bug o algo pero no cambia ninguna funcionalidad.
+
+- el segundo valor cambia es si se le agrega una nueva funcionalidad.
+
+- el primer valor es cuando hay un cambio total en la app.
+
+## Día 24
+
+Animaciones con css
+
+## Día 25
+
+**Animaciones 3D CSS**
+
+[CÓMO TRABAJAR CON 3D](https://desandro.github.io/3dtransforms)
+
+En un plano 3D tenemos tres ejes x, y, z.
+
+- perspective: esta propiedad me sirve para darle porfundidad al padre y poder visualizar los cambios en el eje z.
+
+- perspective-origin. Le podemos decir desde que lugagar queremos ver esa perspectiva, si desde el top, down, right, left, etc..
+
+- transform-style:preserve-3d.//esta propiedad se le agrega al contenedor padre que se le aplique una transformación para que sus hijos conserven sus transformaciones propias.
+
+[EJM](https://codepen.io/jhta/pen/MvaMZe)
+
+## Día 26
+
+**WEBPACK**
+
+loader son las reglas que queremos aplicar en nuestros archivos cuando los requerimos. Estos loaders se configuran en el archivos webpack.config
+
+****
+```javascript
+export default = function (){
+	console.log('default');
+}//este es lo que se importa por default cuando importan todo el módulo y no solo un métofo
+
+import world from './world';// acá importamos todo el módulo
+
+import { world } from './world';// acá importamos solo el método world()
+
+import world, { world } from './world';// acá importamos todo el módulo y el método por aparte también
+```
+
+## Día 27
+
+webpack -p: sirve para compilar los archivos ya a producción, los minifica.
+
+Extract Plugin Webpack: este plugin
+
+**Scrum**
+
+## Día 28
+
+**React**
+
+En React tenemos algo que se llama jsx que lo significa que podemos escribir código HTML dentro de JavaScript
+
+Un objeto de react hace un render cuando sus propiedades o estados cambian.
+
+Un estado en React siempre es un objeto. Estos son estados locales si se refresca la página se borra.
+
+Para crear un proyecto en React lo podemos hacer de la siguiente manera:
+
+```bash
+npm install -g create-react-app
+
+create-react-app my-app
+cd my-app/
+npm start
+```
+
+>JavaScritp no es un leguanje orientado a objetos, es orientado a prototipado.
+
+>join(); esta función de un array que me convierte os valores de un array en un string concatenandolos con lo que le pase dentro de los parentesis. 
+
+Ejm: 
+
+```javascript
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.join('/') //resultado es "Banana/Orange/Apple/Mango"
+fruits.join() //resultado es "Banana,Orange,Apple,Mango"
+fruits.join('-') //resultado es "Banana-Orange-Apple-Mango"
+```
+
+[Tutoriales paso a paso para crear app con React](https://scotch.io/tag/react)
+[Tutorial de app To-do](https://scotch.io/tutorials/create-a-simple-to-do-app-with-react)
+[Tutorial de app con React que usa autheticación con Auth 0](https://auth0.com/blog/reactjs-authentication-tutorial/)
+
+## Día 29
+
+[Herramienta para crear objetos 3d con css.](http://tridiv.com)
+
+> shouldComponentUpdate(nextProps, nextState). En este ciclo de vida podemos controlar cuando queramos que React haga render. Por defecto tiene valor de true, que va hacer render cuando escuche cambios en una prop o state. Por ejemplo si una props cambia pero su valor no igual va hacer render, acá podemos controlar esto.
+
+> componentWillMount(). Este ciclo de vida es antes de que haga render. Acá podemos escribir lógica que queremos que suceda antes de que cargue el DOM.
+
+> componentDidMount(). Este ciclo de vida es cuando ya hizo render. Acá podemos escribir lógica cuando ya el DOM existe, entonces podemos seleccioanr elementos de este.
+
+> componentWillUnmount(). 
+
+**Gráfico ciclo de vida React**
+
+![Ciclo de vida React](./img/react-lifecycle-flow-chart-states-png Eccomerce)
+
+**Semantic UI**
+
+[Documentación](https://semantic-ui.com/)
+
+Librería de componentes web, esta librería es como bootstrap
+
+>Purifycss. Librería para remover el css que no se está usando.
+
+>Motion UI: Tedencia diseño orientada a la animación.
+
+>[Ant Design](https://ant.design/): Librería de componentes web para trabajar con React
+
+## Día 30
+
+[Herramienta para crear wireframes](https://balsamiq.com/)
+
+[Herramienta para crear prototipos](https://www.invisionapp.com/)
+
+## Día 31
+
+Los comoponentes en React tienen una props llamada children, con la cual podemos obtener los elementos que hallan dentro de este componente.
+
+**condicional ternario**
+
+sintaxis: condición ? return : return
+
+true ? // se ejecuta esto si es true : // se ejcuta esto si es falso
+
+esto es igual a 
+
+if(true){
+	se ejecuta esto si es true
+}else{
+	se ejcuta esto si es falso
+}
+
+**Logical operators**
+
+[Documentación](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators)
+
+&& 
+||
+
+> Los métodos dentro de una clase en JavaScritp aún no soportan arrow functions, usar esto necesito babel.
+
+> Kangax esta página me dice que soporta los navegadores de las versiones de javascript
+
+> si un componente solo resive props y no tiene estado se puede escribir como un arrow function.
+
+> [Librería de Facebook para NodeJs](https://github.com/node-facebook/facebook-node-sdk)
