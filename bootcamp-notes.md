@@ -1,5 +1,10 @@
 # Historial bootcamp frontend día a día
 ---
+
+## RoadMap to be Web Developer
+
+[This is a guide to what I need to be a good web developer](https://github.com/kamranahmedse/developer-roadmap)
+
 ## Día uno
 
 bitbucket = github. Bitbucket nos da la posibilidad de crear repositorios privados y públicos gratis y github solo los publicos son gratis ya los privados son de costo.
@@ -30,6 +35,10 @@ Lanzar mini app en webtask
 ## Día dos
 
 **Markdown:** sintaxis básica de formato, para dar formato a texto. Plataformas como github, slack, whatsapp lo soportan.
+
+[Configuración de plugins para Visual Studio Code de Markdown](https://code.visualstudio.com/docs/languages/markdown)
+
+> Para previsualizar un archivo de markdown en visual estudio code lo podemos hacer con el comando ```Ctrl+Shift+V```. Y para dejar la vista previa fija a un costado lo hacemos con el comando ```Ctrl+K V```.
 
 **Ejemplos markdown:**
 
@@ -309,6 +318,14 @@ En los media object para cuando tenemos la imagen flotando a la izquierda y el t
 
 JavaScript (pasar notas de las hojas al este archivo)**Pendiente**
 
+>toFixed(). Este me sirve para reducirle las cifras a un número decimal, adentro de los parentesis le digo cuantas cifras quiero.
+Ejm:
+```javascript
+let num = 29.236324234
+
+num.toFixed(2) //Me quedaría el número 29.24
+```
+>parseInt(num). Me convierte un número flotante en entero.
 ## Día ocho
 
 **Closure**
@@ -938,7 +955,7 @@ ejm:
 
 ## Día 21
 
-JavaScript es un lenguaje que se ejecuta asyncornamente.
+JavaScript es un lenguaje que se ejecuta asyncronamente.
 
 La base de la programación orientada a objetos es que se pueden enviar parámetros entre funciones.
 
@@ -999,6 +1016,7 @@ Use it when you need to store some data for the long term.
 const a = 1;
 localStorage.setItem('key', a);
 localStorage.getItem('key'); // 1
+localStorage.removeItem('key');
 
 // set objects
 
@@ -1266,7 +1284,7 @@ fruits.join('-') //resultado es "Banana-Orange-Apple-Mango"
 
 **Gráfico ciclo de vida React**
 
-![Ciclo de vida React](./img/react-lifecycle-flow-chart-states-png)
+![Ciclo de vida React](./img/react-lifecycle-flow-chart-states.png)
 
 **Semantic UI**
 
@@ -1318,3 +1336,4 @@ if(true){
 > si un componente solo resive props y no tiene estado se puede escribir como un arrow function.
 
 > [Librería de Facebook para NodeJs](https://github.com/node-facebook/facebook-node-sdk)
+
