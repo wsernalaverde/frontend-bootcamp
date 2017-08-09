@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ecf0f1;
+}
+
+.carousel-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 80px;
+}
+
+.carousel-grid .carousel-item{
+  width:32%;
+  margin: 0.5%;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 3px 3px 3px #c9c3c3;
+  cursor: pointer;
+}
+
+.carousel-grid .carousel-item img{
+  max-width: 100%;
+}
+
+.carousel-grid .carousel-item figcaption{
+  padding: 10px 20px;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.carousel .carousel-content{
+  box-shadow: 3px 3px 3px #c9c3c3;
+}
+
+.carousel .carousel-controls{
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.carousel .carousel-controls i{
+    font-size: 35px;
+    color:white;
+}
+
+.carousel .carousel-item{
+  display: none;
+}
+
+.carousel .carousel-item:first-child{
+  display: block;
+}
+
+.carousel .carousel-item{
+  position: relative;
+}
+
+.carousel figcaption{
+  position: absolute;
+    bottom: 0;
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+}
+
+.hidden{
+  display: none;
+}

@@ -5,7 +5,7 @@
 }
 
 .header{
-	background-color: blue;
+	background-color: #1B4079;
 	width: 100%;
 	height: 200px;
 }
@@ -17,7 +17,7 @@
 }
 
 .sidebar{
-	background-color: orange;
+	background-color: #45ADAD;
 	height: 100%;
 	width:30%;
 	display: inline-block;
@@ -26,12 +26,12 @@
 .content{
 	height: 100%;
 	width: 70%;
-	background-color: yellow;
+	background-color: #FAD4C0;
 	display: inline-block;
 }
 
 .footer{
-	background-color: red;
+	background-color: #1B4079;
 	width: 100%;
 	height: auto;
 }
@@ -40,6 +40,6 @@
 	display: inline-block;
     width: 31%;
     margin: 20px 1%;
-    background-color: blue;
+    background-color: #FEE9E1;
     height: 200px;
 }

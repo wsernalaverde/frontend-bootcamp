@@ -6,16 +6,26 @@ En este repositorio se encuentran todas las lecciones y ejercicios del bootcamp 
 
 ### Markdown
 
-[Curriculum Vitae](./markdown-cv/cv-william-serna.md)
+- [Curriculum Vitae](./markdown-cv/cv-william-serna.md)
 
-[Bootcamp notes](./bootcamp-notes.md)
+- [Bootcamp notes](./bootcamp-notes.md)
+
+## Inline-block Execise
+
+- [Sources](./inline-block)
 
 ## Carousel grid with Flexbox
 
+- [Sources](./carousel-flexbox)
+
+## Bank Account Exercise
+
+- [Sources](./bank-account)
+
 ## JavaScripting Exercises
 
-[Sources](./javascripting)
+- [Sources](./javascripting)
 
 ## JSON Humans exercise
 
-[Sources](./json/humans.js)
+- [Sources](./json/humans.json)
