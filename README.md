@@ -29,3 +29,12 @@ En este repositorio se encuentran todas las lecciones y ejercicios del bootcamp 
 ## JSON Humans exercise
 
 - [Sources](./json/humans.json)
+
+## Dogs's Tinder Exercise
+
+- [Sources](https://github.com/wsernalaverde/tinder-dogs)
+- [Preview](https://wsernalaverde.github.io/tinder-dogs/)
+
+## Card component React Exercise
+
+- [Source](https://github.com/wsernalaverde/first-exercise-react)
