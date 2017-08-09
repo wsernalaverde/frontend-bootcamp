@@ -8,7 +8,7 @@
 			"friendslist": [ "Andrés", "Melissa", "Sergio"]
 		},
 		{
-			"name": "Cristian",
+			"name": "Melissa",
 			"age": "25",
 			"pets": ["cat", "fish"],
 			"friends": false,
@@ -22,14 +22,14 @@
 			"friendslist": [ "Susana", "Angie"]
 		},
 		{
-			"name": "William",
+			"name": "Camila",
 			"age": "25",
 			"pets": ["cat", "horse"],
 			"friends": true,
 			"friendslist": [ "Camila", "Lorena", "Sergio"]
 		},
 		{
-			"name": "William",
+			"name": "Vanessa",
 			"age": "25",
 			"pets": ["cat", "dog"],
 			"friends": false,

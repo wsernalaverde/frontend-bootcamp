@@ -325,7 +325,8 @@ let num = 29.236324234
 
 num.toFixed(2) //Me quedaría el número 29.24
 ```
->parseInt(num). Me convierte un número flotante en entero.
+> parseInt(num). Me convierte un número flotante o string en entero.
+> parseFloat(num). Me convierte un entero o string en flotante.
 ## Día ocho
 
 **Closure**
@@ -1329,6 +1330,8 @@ if(true){
 && 
 ||
 
+---
+
 > Los métodos dentro de una clase en JavaScritp aún no soportan arrow functions, usar esto necesito babel.
 
 > Kangax esta página me dice que soporta los navegadores de las versiones de javascript
@@ -1337,3 +1340,47 @@ if(true){
 
 > [Librería de Facebook para NodeJs](https://github.com/node-facebook/facebook-node-sdk)
 
+> Una función que hace parte de un objeto se llaman métodos.
+
+> El objeto window tiene todas la propiedades de la ventana del navegador, por ejemplo para hacerder la ruta en la que está esa ventana lo podemos ver en la propiedad location, de la siguiente forma window.location
+
+**Como saber la ubicación con el objeto geolocation**
+
+[Ejemplo](https://www.w3schools.com/html/html5_geolocation.asp)
+
+ejm:
+
+```javascript
+function showPosition(position) {
+    console.log( "Latitude: " + position.coords.latitude + "Longitude: " + position.coords.longitude);
+}
+
+navigator.geolocation.getCurrentPosition(showPosition)
+```
+
+## Día 32
+
+**React-Router**
+
+**NODE.JS**
+
+Node nos permite usar javaScript del lado del servidor, para crear nuestro backend.
+
+> process es un obejto propio de Node que nos muestra los argumento de los que está corriendo Node.
+Ejm:
+
+```javascript
+
+console.log('Hola' + process.argv[2]);
+
+//node app.js William //en consola me imprime 'Hola William'
+```
+
+**Express js**
+Es un framework para lanzar servidores en node.js, este debemos instalarlo como una dependencia de proyecto con npm.
+
+**Pug**
+
+Este es un sistema de templates en Node.js
+
+> Hacer whorkshop de learnyounode de NodeSchool
