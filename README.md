@@ -20,7 +20,7 @@ En este repositorio se encuentran todas las lecciones y ejercicios del bootcamp 
 
 ## Bank Account Exercise
 
-- [Sources](./bank-account)
+- [Source](./bank-account/index.js)
 
 ## JavaScripting Exercises
 
@@ -28,7 +28,7 @@ En este repositorio se encuentran todas las lecciones y ejercicios del bootcamp 
 
 ## JSON Humans exercise
 
-- [Sources](./json/humans.json)
+- [Source](./json/humans.json)
 
 ## Dogs's Tinder Exercise
 
@@ -37,4 +37,4 @@ En este repositorio se encuentran todas las lecciones y ejercicios del bootcamp 
 
 ## Card component React Exercise
 
-- [Source](https://github.com/wsernalaverde/first-exercise-react)
+- [Sources](https://github.com/wsernalaverde/first-exercise-react)

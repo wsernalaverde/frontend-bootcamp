@@ -316,9 +316,79 @@ En los media object para cuando tenemos la imagen flotando a la izquierda y el t
 
 ##Día siete
 
-JavaScript (pasar notas de las hojas al este archivo)**Pendiente**
+**JavaScript** 
 
->toFixed(). Este me sirve para reducirle las cifras a un número decimal, adentro de los parentesis le digo cuantas cifras quiero.
+JavaScript es un lenguaje de programación compilado. Existen lenguajes compilados y de interpretación, los compilados se conpilan al momento de ejecutar y lo hace más rápido.
+
+> Los lenguajes tienen statements(declaraciones).
+
+Operadores: + , * , - , / 
+Compuestos: += , *= , -= , /=
+
+Ejm:
+```javascript
+
+let a = 9;
+
+a += 1;
+
+//R: a=10
+```
+
+**Logical operators**
+
+
+[Documentación](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators)
+
+Estos son con && y ||. 
+
+_operador &&_
+Si tengo varios y el último lo antecede un true me retorna la última expresión.
+
+Ejm:
+
+```javascript
+
+true && true && true // Me retorna el último true
+
+true && true && 'casa' // Me retorna casa
+
+```
+
+_operador ||_
+
+
+**Condicional ternario**
+
+sintaxis: condición ? return : return
+
+true ? // se ejecuta esto si es true : // sino se ejcuta esto si es falso
+
+esto es igual a 
+
+if(true){
+	se ejecuta esto si es true
+}else{
+	se ejcuta esto si es falso
+}
+
+Ejm:
+
+```javascript
+
+(age>12) ? console.log('mayor a 12') : console.log('menor a 12')
+
+//La expresión de arriba es igual a escribir
+
+if(age>12){
+	console.log('mayor a 12')
+}else{
+	console.log('menor a 12')
+}
+
+```
+
+> toFixed(). Este me sirve para reducirle las cifras a un número decimal, adentro de los parentesis le digo cuantas cifras quiero.
 Ejm:
 ```javascript
 let num = 29.236324234
@@ -327,6 +397,7 @@ num.toFixed(2) //Me quedaría el número 29.24
 ```
 > parseInt(num). Me convierte un número flotante o string en entero.
 > parseFloat(num). Me convierte un entero o string en flotante.
+
 ## Día ocho
 
 **Closure**
@@ -1234,6 +1305,12 @@ Extract Plugin Webpack: este plugin
 
 **Scrum**
 
+Metodología Scrum:
+
+Un sprint dura una semana El product owner es quien define la prioridad de una funcionalidad
+
+Es clave ir graduando la funcionalidad del feature
+
 ## Día 28
 
 **React**
@@ -1309,27 +1386,6 @@ Librería de componentes web, esta librería es como bootstrap
 
 Los comoponentes en React tienen una props llamada children, con la cual podemos obtener los elementos que hallan dentro de este componente.
 
-**condicional ternario**
-
-sintaxis: condición ? return : return
-
-true ? // se ejecuta esto si es true : // se ejcuta esto si es falso
-
-esto es igual a 
-
-if(true){
-	se ejecuta esto si es true
-}else{
-	se ejcuta esto si es falso
-}
-
-**Logical operators**
-
-[Documentación](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators)
-
-&& 
-||
-
 ---
 
 > Los métodos dentro de una clase en JavaScritp aún no soportan arrow functions, usar esto necesito babel.
@@ -1384,3 +1440,14 @@ Es un framework para lanzar servidores en node.js, este debemos instalarlo como 
 Este es un sistema de templates en Node.js
 
 > Hacer whorkshop de learnyounode de NodeSchool
+
+## Día 33
+
+Material para repasar html, css y jQuery.
+
+[Link uno](http://learn.shayhowe.com/html-css/)
+
+[Link Dos](http://learn.shayhowe.com/advanced-html-css/)
+
+> Hacer whorkshop de express llamado 'expressworks'
+
