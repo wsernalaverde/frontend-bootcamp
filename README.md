@@ -32,7 +32,7 @@ En este repositorio se encuentran todas las lecciones y ejercicios del bootcamp 
 ## Curriculum Vitae with Responsive design
 
 - [Sources](./cv-with-responsive-design)
-- [Preview]()
+- [Preview](https://wsernalaverde.github.io/frontend-bootcamp/)
 
 ## Inline-block Execise
 
