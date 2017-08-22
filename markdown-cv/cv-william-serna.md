@@ -16,12 +16,13 @@ Tecnólogo en Sistemas del Instituto Tecnológico Metropolitano, apasionado por 
 
 Título | Institución | Año de graduación
 ------ | ----------- | -----------------
+**Bootcamp Frontend Developer** | World Tech Makers | 2017
 **Especialización Tecnológica en Desarrollo de Aplicaciones para Dispositivos Moviles**  | Sena | 2017
 **Curso Desarrollo Web Online**       | Platzi | 2017
 **Tecnólogo Sistemas de Información** | Instituto Tecnológico Metropolitano     |     2015
 **Técnico en Mantenimiento y Reparación de Computadores** | Compuestudio | 2007
 **Bachiller Académico** | Ins. Edu. Alfonso Mora Naranjo | 2009
-**Inglés (Pre-Intermediate - B1)** | Lexicom | 2017
+**Inglés (Pre-Intermediate III - B1)** | Lexicom | 2017
 
 > ## Habilidades
 

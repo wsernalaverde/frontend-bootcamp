@@ -7,8 +7,32 @@ En este repositorio se encuentran todas las lecciones y ejercicios del bootcamp 
 ### Markdown
 
 - [Curriculum Vitae](./markdown-cv/cv-william-serna.md)
-
 - [Bootcamp notes](./bootcamp-notes.md)
+
+## Curriculum Vitae in HTML
+
+- [Source](./html-cv)
+
+## Curriculum Vitae with Styles
+
+- [Sources](./cv-html-with-styles)
+
+## Curriculum Vitae with Semantic HTML
+
+- [Sources](./cv-with-semantic-html)
+
+## Curriculum Vitae with Contact Form
+
+- [Sources](./cv-with-contact-form)
+
+## Curriculum Vitae Contact Form with DOM selection
+
+- [Sources](./cv-with-contact-form-dom-selection)
+
+## Curriculum Vitae with Responsive design
+
+- [Sources](./cv-with-responsive-design)
+- [Preview]()
 
 ## Inline-block Execise
 

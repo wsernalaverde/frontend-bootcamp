@@ -316,7 +316,7 @@ En los media object para cuando tenemos la imagen flotando a la izquierda y el t
 
 ##Día siete
 
-**JavaScript** 
+###JavaScript
 
 JavaScript es un lenguaje de programación compilado. Existen lenguajes compilados y de interpretación, los compilados se conpilan al momento de ejecutar y lo hace más rápido.
 
@@ -397,6 +397,15 @@ num.toFixed(2) //Me quedaría el número 29.24
 ```
 > parseInt(num). Me convierte un número flotante o string en entero.
 > parseFloat(num). Me convierte un entero o string en flotante.
+
+> charAt(). Este método no sirve para obtener un caracter de un string de acuerdo al index que le pasemos.
+
+ejem:
+```javascript
+let string = 'Hola soy William'
+
+string.charAt(9);//la respuesta será w
+```
 
 ## Día ocho
 
@@ -572,6 +581,33 @@ Se deben solucionar los confilctos manualmente, con la ayuda de editores visuale
 - git checkout "nombre-rama" esto nos sirve para navegar entre las ramas.
 
 - git branch -d "nombre-rama" este nos sirve para borrar la rama.
+
+**Cambiar remoto de un repositorio de git**
+
+[Pasos](https://help.github.com/articles/changing-a-remote-s-url/)
+
+- git remote -v (Este lista los remotos existentes, y obtener el nombre del remoto que queremos cambiar)
+
+Ejm:
+
+```bash
+
+$ git remote -v
+origin  git@github.com:USERNAME/REPOSITORY.git (fetch)
+origin  git@github.com:USERNAME/REPOSITORY.git (push)
+
+```
+
+- git remote set-url (Este es el que nos permite cambiar la url del remoto)
+
+Ejm:
+
+```bash
+
+git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+
+```
+- Por último podemos volver a ejecutar el comando git remote -v, para saber si se realizó el cambio en la url del remoto.
 
 **JSON**
 
@@ -1321,6 +1357,8 @@ Un objeto de react hace un render cuando sus propiedades o estados cambian.
 
 Un estado en React siempre es un objeto. Estos son estados locales si se refresca la página se borra.
 
+Si vamos a trabajar en un proyecto pequeño podemos usar el framework de Create React App, pero si vamos a trabajar en un proyecto más grande podemos usar el framework de Next.
+
 Para crear un proyecto en React lo podemos hacer de la siguiente manera:
 
 ```bash
@@ -1450,4 +1488,245 @@ Material para repasar html, css y jQuery.
 [Link Dos](http://learn.shayhowe.com/advanced-html-css/)
 
 > Hacer whorkshop de express llamado 'expressworks'
+
+## Día 34
+
+**Next**
+
+Este es como create-react-app, que es un framework para hacer aplicaciones con React.
+Este fue creado por la empresa Zeit.
+Next trabaja con hot module replacement que es que actuliza solo el bloque o componente del cual se actualizo su código. 
+Este también tiene tree shaking y server side rendering.
+Next tiene un router integrado y no es necesario hacer react router. Con este solo tenemos que crear un directorio llamado pages y allí crear los archivos de las páginas.
+
+> getInitialProps() es un método propio de las páginas en Next, con el cual puedo hacer peticiones al servidor. Este tiene un objeto llamado context con las siguientes propiedades:
+
+- pathname - path section of URL
+- query - query string section of URL parsed as an object
+- asPath - the actual url path
+- req - HTTP request object (server only)
+- res - HTTP response object (server only)
+- jsonPageRes - Fetch Response object (client only)
+- err - Error object if any error is encountered during the rendering
+
+Para utilizar primero next se debe inicializar el package.json con npm i y luego se debe instalar de la siguiente forma:
+
+```bash
+
+npm next react react-dom --save
+
+```
+
+> Tree shaking: Este no sirve para validar que métodos o funciones de las dependencias no se están utilizando y las saca al momento de compilar nuestro código final.
+
+> clodup: Es como un drive, este tiene hasta 500 gb gratis, gratis, gratis...
+
+> Un chat se crea con sockets.
+
+> Meteor.js es una plataforma para crear apps web facilmente. (Se puede utilizar para crear MPV rápidamente y luego escalar la app)
+
+> Aplicaciones Isomorficas: son aplicaciones que corren tanto del lado del servidor como del cliente con el mismo código.
+
+> [gitignore.io](https://www.gitignore.io/) Este no sirve para crear la configuración de nuestro archivo .gitignore, solo debemos decirle con que tecnologías vamos a trabajar.
+
+**Now**
+
+Este sirve para hacer deploy de aplicaciones fácilmente.
+Con este puedo tener hasta 3 instancias gratuitas sin que se congelen ( congelar es que tras 9 horas de inactividad en el sitio se congela la maquina y esta tarda 15 segundos para descongelarse una vez vuelvan a ingresar al sitio)
+Now no entrega un dominio muy ramdon pero le podemos poner un alias a este, para hacer esto solo debemos correr el comando ``` now  alias "nombre del alias"```
+Para poner un dominio personalizado se debe tener un plan en now.
+
+## Día 35
+
+Trabajamos en el proyecto toda la clase.
+
+> [WOW](http://mynameismatthieu.com/WOW/) Esta librería podemos hacer animaciones dependiendo cuando se haga scroll a la página.
+
+> [Parallax.js](http://matthew.wagerfield.com/parallax/) Esta librería me sirve para hacer parallax distinto que es como animar mundos, dandole profundidad.
+
+## Día 36
+
+> The golden cicle - Simon Sinek
+
+**Pitch**
+
+vender una idea en 60 segundos
+
+- **conectar** con un inversionista inmediatamente y captar la atención
+
+- outline el **problema**
+
+- ofrecer una **solución**
+
+- Explicar el **modelo de negocios** - terminos simples y fáciles de entender.
+
+- preguntar por lo que necesitas para llegar al próximo nivel ***inversión*
+
+Formas de monetizar una app
+
+Gratis: publicidad, comunidad (vender datos de mis usuarios), data big (vender comportamiento de mis clientes).
+
+Freemium: gratis pero para opciones mejores se debe de pagar.
+
+Premium: se debe pagar siempre.
+
+**TIPS PARA UN BUEN PTICH**
+
+- conectar con tu audiencia, entusiasmo, pasión
+
+- no memorizar y recitar
+
+- promedio 10 - 12 slides, 2 minutos/slide
+
+- Cubre solo los puntos criticos
+
+- No leer slides o enfocar en projector
+
+- Incluye tu visión, no solo dónde estás o lo que tienes ahora.
+
+> Negocios B2B (Bussines to bussines) O B2C (bussines to personas)
+
+## Día 37
+
+> cors: cross origin (con esto le decimos que puede hacer peticiones desde cualquier dominio, pero esto no es seguro).
+
+> [nodemon:](https://github.com/remy/nodemon) este comando sirve para levantar el servidor en modo demonio en desarrollo para que si se cae el proceso se vuelva a levantar solo, y con este también podemos hacer watch de los cambios.
+
+> [forever:](https://github.com/foreverjs/forever) este es levantar el servidor en modo demonio en producción.
+
+> [webtaks tools:](https://github.com/auth0/webtask-tools) framework que permite subir una configuración de un servidor en webtask
+
+**Body parser**
+
+[Documentación](https://github.com/expressjs/body-parser)
+Este funciona como un middleware que permite responder con objetos especiales en una respuesta de express.
+
+**Middleware en node**
+
+Es algo que se pone intermedio de los procesos para realizar alguna funcionalidad antes de ejecutar otro proceseo. Ejm:
+
+tengo mi vista que le hace peticiones a un controlador y luego va y guarda con el modelo en la base de datos pero en esta no hay ningún sistema de autenticación. Esto se puede solucionar con un middleware como passport en nodejs.
+
+**Bases de datos**
+
+Existen dos tipos relacionales (sql) y las no relacionales .
+
+**Relacionales**
+
+Las BD tienen algo muy importante llamado rollback, dentro de sql existe pl-sql que es como la forma de programación en sql donde podemos hacer for, condicionales, etc. También hay tirggers (estos son como lo eventos),procedimientos almacenados (estos son como las funciones)
+
+###Modelo entidad relación
+
+Es como dibujar la base de datos para saber como modelarlas, ver todas las tablas y sus relaciones.
+
+si es de 1 a muchos: el muchos es el que debe tener el id del 1.
+si es 1 a 1: cualquiera de los dos puede tener el id.
+si es de muchos a muchos: se de crear una tabla en medio la cual de llevar el id de los dos.
+
+> SQL-inyection: es la forma más clásica de hackear la base de datos de un app.
+
+Servicios de bd relacionales:
+
+- MySQL
+- Postgress
+- SQLServer (con licencia)
+- Oracle (con licencia)
+
+
+**No relacionales**
+
+Estas se guardan en formato json, un problema de estas bd es la duplicación de datos. La ventaja es que esta son más rápidas para leer los datos.
+
+Servicios de bd no relacionales:
+
+- [MongoDB](http://fernetjs.com/wp-content/uploads/2012/08/mongodb.pdf)
+
+## Día 38
+
+C(create):post/put
+R(Read):get
+U(Update):post
+D(Delete):delete
+
+PostMan: servicio para consumir APIS.
+
+Swagger: Herramienta para crear APIS.
+
+[Códigos de status de respuesta](https://httpstatuses.com/)
+
+Http: cuando entra por este protocolo entra por defecto en el puerto 80
+Https: cuando entra por este protocolo entra por defecto en el puerto 443
+
+[Mongolab](https://mlab.com/): Este tengo hasta 500mb gratis, mongolab me permite crear un servicio donde tenga instalado mongo.
+
+## Día 39
+
+**Ejemplo de un servidor con express montado en Webtask**
+
+[Documentación](https://github.com/auth0/webtask-tools)
+
+```javascript
+import express from 'express'
+import Webtask from 'webtask-tools'
+import bodyParser from 'body-parser'
+
+const app = express()
+app.use(bodyParser.json())
+
+app.get('/products', function(req, res) {
+  const productList = [
+    {
+      id: 1,
+      title: "Neil deGrasse Tyson's Newest STEM campaign",
+      image:
+        'https://d2v48i7nl75u94.cloudfront.net/uploads/f1dc399219683de51f22d9dfa7e11801.jpg',
+      quantity: 1,
+      price: 50000
+    },
+    {
+      id: 2,
+      title: "Neil deGrasse Tyson's Oldest STEM campaign",
+      image:
+        'https://d2v48i7nl75u94.cloudfront.net/uploads/f1dc399219683de51f22d9dfa7e11801.jpg',
+      quantity: 2,
+      price: 100000
+    }
+  ];
+
+  res.json({ productList });
+});
+
+module.exports = Webtask.fromExpress(app);
+
+```
+
+
+## Día 40
+
+[CVmaker](https://cvmkr.com/)
+[Visualcv](https://www.visualcv.com/)
+
+git fetch: este nos sirve para saber que cambios hicieron en el remoto, si hay ramas nueva.
+
+si hay una rama nueva hacemos git checkout y este no lo sincroniza.
+
+**Mongo**
+
+[Documentación](https://docs.mongodb.com/manual/reference/method/)
+[Documentación Mongo Api Node](http://mongodb.github.io/node-mongodb-native/2.2/api/)
+
+> Los ids que se generan cuando se gurada un registro en una collection se gurdan como un ObjectID. 
+
+**Ruta en express**
+
+una ruta (endpoint) en express recibe en en el objeto req tres opciones
+
+- body (req.body) Es cuando se envía la info en el body
+- params (req.params) Es cuando se envía los datos por la url con :
+- query (req.querys) Se pasa una query en la url con ?
+
+[happyjs] framework para crear apis en node.
+
+joi: librería para validar el formato de entrada del json cuando lo vamos a guradar.
+
 

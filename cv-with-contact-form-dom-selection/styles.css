@@ -1,0 +1,238 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.header__bg{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(left, #00c1cf 0%, #5472d2 50%, #00c1cf 100%);
+  background: -moz-linear-gradient(left, #00c1cf 0%, #5472d2 50%, #00c1cf 100%);
+  background: -o-linear-gradient(left, #00c1cf 0%, #5472d2 50%, #00c1cf 100%);
+  background: linear-gradient(to right, #00c1cf 0%, #5472d2 50%, #00c1cf 100%);
+  transform: skewY(-7deg);
+  transform-origin: top left ;
+}
+
+.cont-header{
+    position: relative;
+    height: 430px;
+    margin-bottom: 10px;
+}
+
+.row-header{
+    position: relative;
+    display: flex;
+    /*background: -webkit-linear-gradient(150deg, #EC0B43, #1B1B3A);
+    background: -moz-linear-gradient(150deg, #EC0B43, #1B1B3A);
+    background: -o-linear-gradient(150deg, #EC0B43, #1B1B3A);
+    background: linear-gradient(240deg, #EC0B43, #1B1B3A);*/
+    padding: 50px 40px;
+    color: white;
+}
+
+.cont-profile-pic img{
+    max-width: 210px;
+}
+
+.cont-info h1{
+    margin: 0;
+    font-size: 45px;
+    line-height: 44px;
+}
+
+.cont-center-elements{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont-info-contact ul{
+    padding: 0;
+    list-style: none;
+}
+
+.cont-info-contact ul li{
+    margin: 14px 0;
+}
+
+.cont-info-contact ul li a{
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.cont-info-contact ul li i{
+    background-color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin: 0 10px;
+    color: #4382CE;
+}
+
+.row-general{   
+    display: flex;
+    padding: 0 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.sidebar{
+    flex: 1;
+    border-right: 1px solid#ececec;
+    padding: 10px 37px;
+}
+
+.cont-general{
+    flex: 2;
+    padding: 10px 43px;
+}
+
+h2{
+    color:#00C1CB;
+    margin: 2px 0;
+}
+
+.list-info{
+    list-style: none;
+    padding-left: 20px;
+}
+
+.list-info li{
+    margin: 5px 0;
+    display: flex;
+    align-items: baseline;
+}
+
+.list-info li:before{
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f054";
+    padding: 0 10px 0 0;
+}
+
+.list-info h3{
+    margin: 0;
+    color: #299ace;
+    font-size: 20px;
+}
+
+.list-info p{
+    margin: 0;
+}
+
+footer{
+    position: relative;
+}
+
+.cont-footer p{
+    margin: 0;
+}
+
+.header-module{
+    display: flex;
+    align-items: center;
+}
+
+.line-module{
+    background: linear-gradient(to right, #00C1CB  50%, #5472d2 100%);
+    height: 20px;
+    flex: 1;
+    transform: skewX(-23deg);
+    margin: 0 14px;
+}
+
+.cont-footer{
+    background: -webkit-linear-gradient(left, #00c1cf 0%, #5472d2 50%, #00c1cf 100%);
+    background: -moz-linear-gradient(left, #00c1cf 0%, #5472d2 50%, #00c1cf 100%);
+    background: -o-linear-gradient(left, #00c1cf 0%, #5472d2 50%, #00c1cf 100%);
+    background: linear-gradient(to right, #00c1cf 0%, #5472d2 50%, #00c1cf 100%);
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+time{
+    font-size: smaller;
+}
+
+.cont-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-contact{
+    max-width: 600px;
+    text-align: center;
+    width: 100%;
+    margin: 0 20px;
+    padding: 30px 0;
+    z-index: 2;
+}
+
+.cont-item-form{
+    padding: 9px 0;
+}
+
+.cont-item-form input[type='text'], .cont-item-form input[type='email'], .cont-item-form textarea{
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ececec;
+}
+
+.btn-form{
+    background: #00c1cf;
+    color: white;
+    border: 0;
+    font-size: 16px;
+    width: 29%;
+    transform: skewX(-23deg);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.btn-form:hover{
+    box-shadow: 1px 1px 1px  #00c1cf;
+    box-shadow: 1px 1px 1px rgba(0, 193, 207, 0.48);
+    opacity: 0.9;
+}
+
+.bg-contacto{
+    background: -webkit-linear-gradient(left, #00c1cf 0%, #5472d2 50%, #00c1cf 100%);
+    background: -moz-linear-gradient(left, #00c1cf 0%, #5472d2 50%, #00c1cf 100%);
+    background: -o-linear-gradient(left, #00c1cf 0%, #5472d2 50%, #00c1cf 100%);
+    background: linear-gradient(to right, #00c1cf 0%, #5472d2 50%, #00c1cf 100%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0px;
+    top: 9%;
+    transform: skewY(-12deg);
+    transform-origin: bottom right;
+}
+
+.line-separator{
+    width: 70%;
+    margin: 40px auto;
+    height: 1px;
+}
