@@ -236,3 +236,37 @@ time{
     margin: 40px auto;
     height: 1px;
 }
+
+/* Media queries*/
+
+@media screen and (max-width: 990px) {
+  .row-header{
+    flex-wrap: wrap;
+  }
+  .cont-header{
+      height: auto;
+  }
+  .cont-center-elements{
+    flex: initial;
+    width: 100%;
+  }
+  .cont-info h1{
+    font-size: 30px;
+    line-height: 29px;
+    text-align: center;
+  }
+  .row-general{
+      flex-wrap:wrap;
+  }
+  .sidebar{
+      width: 100%;
+      border-right: 0;
+      padding: 10px;
+      flex: initial;
+  }
+  .cont-general{
+      width:100%;
+      padding: 10px;
+      flex: initial;
+  }
+}
