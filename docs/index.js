@@ -7,14 +7,18 @@ document.addEventListener('DOMContentLoaded', () =>{
     let email = document.getElementById('email').value;
     let subject = document.getElementById('subject').value;
 
-    const url = `https://wt-eea20b749793fa73fffb24558f3360b6-0.run.webtask.io/form-cv?name=${name}&email${email}&subject${subject}`
+    const url = `https://wt-eea20b749793fa73fffb24558f3360b6-0.run.webtask.io/form-cv`
 
     fetch(url, {  
     method: 'post',  
     headers: {  
-      "Content-type": "text/plain"  
+      "Content-type": "application/json"  
     },  
-    body: null
+    body: {
+        'name': name,
+        'email': email,
+        'subject':subject
+    }
     })
     .then(function (data) {  
         console.log('Request succeeded with JSON response', data);  
