@@ -270,3 +270,12 @@ time{
       flex: initial;
   }
 }
+
+@media screen and (max-width: 440px) {
+ .list-info{
+     padding: 0;
+ }
+ h2{
+     font-size: 20px;
+ }
+}
