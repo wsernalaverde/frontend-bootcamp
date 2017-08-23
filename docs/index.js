@@ -14,11 +14,11 @@ document.addEventListener('DOMContentLoaded', () =>{
     headers: {  
       "Content-type": "application/json"  
     },  
-    body: {
-        'name': name,
-        'email': email,
-        'subject':subject
-    }
+    body: JSON.stringify({
+        name: name,
+        email: email,
+        subject: subject
+    })
     })
     .then(function (data) {  
         console.log('Request succeeded with JSON response', data);  

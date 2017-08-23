@@ -1,7 +1,7 @@
 module.exports = function(context, cb) {
   
-var api_key = context.apiKey;
-var domain = context.domainMailgun;
+var api_key = context.secrets.apiKey;
+var domain = context.secrets.domainMailgun;
 var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
   var data = {
           from: 'wsernalaverde@gmail.com',
@@ -17,4 +17,4 @@ var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
         cb(null, { data: body })
     });
     
-}
+}        
