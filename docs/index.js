@@ -7,7 +7,21 @@ document.addEventListener('DOMContentLoaded', () =>{
     let email = document.getElementById('email').value;
     let subject = document.getElementById('subject').value;
 
-    console.log('Datos capturados \n Nombre: ' + name + '\n Email: ' + email + '\n Asunto: ' + subject);
+    const url = `https://wt-eea20b749793fa73fffb24558f3360b6-0.run.webtask.io/form-cv?name=${name}&email${email}&subject${subject}`
+
+    fetch(url, {  
+    method: 'post',  
+    headers: {  
+      "Content-type": "text/plain"  
+    },  
+    body: null
+    })
+    .then(function (data) {  
+        console.log('Request succeeded with JSON response', data);  
+    })  
+    .catch(function (error) {  
+        console.log('Request failed', error);  
+    });
  })
 
 });

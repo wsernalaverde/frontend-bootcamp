@@ -211,6 +211,11 @@ time{
     cursor: pointer;
 }
 
+.btn-form p{
+    margin: 0;
+    transform: skewX(23deg);
+}
+
 .btn-form:hover{
     box-shadow: 1px 1px 1px  #00c1cf;
     box-shadow: 1px 1px 1px rgba(0, 193, 207, 0.48);
@@ -236,3 +241,4 @@ time{
     margin: 40px auto;
     height: 1px;
 }
+
