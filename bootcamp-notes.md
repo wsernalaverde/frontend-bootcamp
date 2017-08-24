@@ -31,6 +31,10 @@ Lanzar mini app en webtask
 1. para subirlo desde un archivo del pc le damos wt create y el nombre del archivo
 > Herramienta ["Typeform"](http://typeform.io/) para hacer formularios súper amigables
 
+> Las webtask tienen algo llamado secrets donde podemos alojar parametros secretos como api keys, etc. esta las podemos obtener desde el contexto de la webtask en un objeto llamado secrets. 
+Ejm:
+
+
 
 ## Día dos
 
@@ -191,6 +195,8 @@ selector {
 ```html
 <link rel="stylesheet" type="text/css" href="ruta de la imagen">
 ```
+
+> [Efectos header diagonales con css](https://css-tricks.com/creating-non-rectangular-headers/)
 
 **Unidades de medidas**
 
@@ -546,7 +552,7 @@ Existen una variada cantidad de inputs de entrada en los formularios.
 
 >Bootstrap validator
 
->mailgun servicio para envío de correos sin necesidad de un servidor. es gratis
+>[Mailgun](https://github.com/bojand/mailgun-js) servicio para envío de correos sin necesidad de un servidor. es gratis
 
 
 **Media queries**
@@ -1103,6 +1109,8 @@ Me sirve para comunicarme al servidor si necesidad de recargar la página
 
 **Fetch**
 [Ejemplos](https://davidwalsh.name/fetch)
+[Ejemplos](https://developers.google.com/web/updates/2015/03/introduction-to-fetch)
+[Ejemplo tipo post](https://stackoverflow.com/questions/39565706/post-request-with-fetch-api)
 
 ```
 fetch('url')
@@ -1729,4 +1737,35 @@ una ruta (endpoint) en express recibe en en el objeto req tres opciones
 
 joi: librería para validar el formato de entrada del json cuando lo vamos a guradar.
 
+## Día 41
 
+###Testing
+
+Existen tres tipos de test: (Unit test, integrations test, acceptance tests(GUI))
+
+**Unit test**
+
+Se debe hacer prueba unitaria de cada método o función de nuestra aplicación. Este test es más para lógica de negocio.
+
+**Integration test**
+
+Se debe testear que nuetros frontend y backend funcionen correctamente cuando se integran.
+
+**GUI**
+
+Este tests es para la interfaz gráfica.
+
+
+####Mocha
+
+Es una librería para hacer test, este es un runner que corre que Node
+
+####AVA
+
+Es una librería para hacer test.
+
+
+Jest es una librería para testear React este es de Facebook. 
+
+[Storybooks](https://github.com/storybooks/storybook): me sirve para probar los componentes en React. Con el cual podemos ver los disntintos estados de nuestros componentes.
+Este tiene un plugin que se llama Storyshots que con solo instalarlo e importalo nos hace snapchot testing de nuestros componentes.

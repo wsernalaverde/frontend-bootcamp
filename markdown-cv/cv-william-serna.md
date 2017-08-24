@@ -33,7 +33,7 @@ Título | Institución | Año de graduación
 - BASH
 - JavaScript (ES2015)
 - Node.js
-- Rethinkdb
+- Rethinkdb, MongoDB
 - Amazon Web Services (EC2)
 - Mockups
 
