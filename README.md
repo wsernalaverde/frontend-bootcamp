@@ -42,6 +42,10 @@ En este repositorio se encuentran todas las lecciones y ejercicios del bootcamp 
 
 - [Sources](./carousel-flexbox)
 
+## Webtask exercise
+
+- [Sources](./exercise-webtask)
+
 ## Bank Account Exercise
 
 - [Source](./bank-account/index.js)

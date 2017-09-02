@@ -1769,3 +1769,66 @@ Jest es una librería para testear React este es de Facebook.
 
 [Storybooks](https://github.com/storybooks/storybook): me sirve para probar los componentes en React. Con el cual podemos ver los disntintos estados de nuestros componentes.
 Este tiene un plugin que se llama Storyshots que con solo instalarlo e importalo nos hace snapchot testing de nuestros componentes.
+
+## Día 42
+
+**Autenticación**
+
+En la autenticación nunca se debe almacenar en la base de datos la contraseña tal cual como la escribe el usuario, se deben guardar encriptadas.
+
+- Encriptar: tratar los datos de una manera para obtenerlos codificados que solo se pueden decodificar si se conoce la clave con la que lo codificaron.
+
+***[PassportJS](http://passportjs.org/)**
+Librería para realizar autenticaión en NodeJS. Este funciona como un middleware.
+
+> OAuth2.0: protocolo de autenticación.
+
+> Json Web tokens: estandar para evitar usar tokens, este viene cifrado.
+
+**Auth0**
+
+[Sistema como trabaja](https://auth0.com/docs/api-auth/grant/implicit#overview)
+
+Auth0 tiene unos quickstart que nos permite configurar el login dependiendo de nuestra aplicación, si es una SPA, Web App, App Móvil, etc.
+
+En este ejemplo nos muestra como uitlizar la autenticación de Auth0 para una SPA realizada con React. (Ejercicio)[https://auth0.com/docs/quickstart/spa/react]
+
+[Documentación](https://auth0.com/docs/libraries/lock/v10/auth0js). Hay dos formas de usar Auth0 con el lock que con este podemos customizar completamente la opción de login o con el SDK que nos da el area del login embebida dentro del cliente en Auth0([Hosted pages](https://manage.auth0.com/#/login_page)).
+
+[Ejemplo de LOCK personalizado](https://github.com/auth0-samples/auth0-react-samples/tree/embedded-login)
+[Ejemplo 2 de LOCK personalizado](https://davidwalsh.name/react-authentication)
+[Ejemplo 3 de LOCK personalizado](https://auth0.com/docs/libraries/lock/v10/customization)
+
+**Redux**
+
+Lo inventó Dan abromov
+
+React tiene una convención que se llama smartComponent y dumpComponent.
+Los SmartComponent lo unico que hacen es que sirve para anejar el estado y los dumpComponents son para los componentes de UI, como menús, botones, etc.
+
+Redux es una arquitectura de como manejar el estado en una aplicación.
+Este tiene Acciones, Reducers y Store.
+
+[Curso de Redux gratis](https://egghead.io/courses/getting-started-with-redux)
+
+Acciones: Son como los eventos que suceden
+Reducer: Este recibe dos parametros el state y la action
+Store: A este se le pasan los reducers
+
+[Ejmplos y documentación de Redux](http://es.redux.js.org/docs/basico/)
+
+## Día 43
+
+**Configuración de un proyecto de React desde cero**
+
+[Ejemplo](https://github.com/glrodasz/zendify)
+
+> Zendesk: plataforma para crear tiquets de soporte, no es gratis. Tiene una versión gratuita llamada Zendesk inbox, que sirve para tener una cuenta de correo que pueden estar revisando varias persona sin pisarse los correos.
+
+> Configurar linter según las reglas de Airbnb. Linter espara validar que el código esté bien escrito.
+
+> .editorconfig : archivo para configurar el sistema de estilos de los editores de textos, ejm: cantidad de espacios con tabs, etc, Se debe tener instalado el plugin editorconfig. Esto se hace para que el proyecto si tiene varios colaboradores con distintos editores, el proyecto quede con el mismo estilo de identación.
+
+> js doc: estandar de como documentar cosas
+
+> para usar la herramienta de redux del navegador se debe también configurar en el proyecto para que este se pueda comunicar
